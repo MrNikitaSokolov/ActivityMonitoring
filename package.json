@@ -1,0 +1,36 @@
+{
+  "name": "activitymonitoring.algorithmtesting",
+  "version": "1.0.0",
+  "description": "Testing framework of algorithms for activity monitoring",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "start watchify client/exploratory.js -o public/js/exploratory.js -v && start watchify client/prediction.js -o public/js/prediction.js -v",
+    "dev": "start watchify client/exploratory.js -o public/js/exploratory.js -v && start watchify client/prediction.js -o public/js/prediction.js -v && nodemon server.js",
+    "build": "browserify client/exploratory.js -o public/js/exploratory.js && browserify client/prediction.js -o public/js/prediction.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.ibm.com:Nikita-Sokolov/ActivityMonitoring.AlgorithmTesting.git"
+  },
+  "author": "Nikita Sokolov",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "events": "^1.1.1",
+    "express": "^4.15.3",
+    "gaussian": "^1.1.0",
+    "highcharts": "^5.0.12",
+    "jquery": "^3.2.1",
+    "knockout": "^3.4.2",
+    "log4js": "^1.1.0",
+    "mqtt": "^2.9.1",
+    "node-svm": "^2.1.8",
+    "path": "^0.12.7",
+    "q": "^1.5.0",
+    "request": "^2.81.0",
+    "request-promise": "^4.2.1",
+    "socket.io": "^2.0.3",
+    "socket.io-client": "^2.0.3"
+  }
+}

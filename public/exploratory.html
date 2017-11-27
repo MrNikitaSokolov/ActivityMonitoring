@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <script type="text/javascript" src="/static/js/exploratory.js"></script>
+  <link rel="stylesheet" href="/static/css/highcharts.css">
+  <link rel="stylesheet" href="/static/css/global.css">
+</head>
+
+<body>
+
+  <div id="visualization"></div>
+
+  <div id="algorithms-aggregation" style="float:left">
+    <div class="card">
+      <div class="container">
+        <h4><b>Data point</b></h4>
+        <p data-bind="text: value"></p>
+        <h4><b>Timestamp</b></h4>
+        <p data-bind="text: timestamp"></p>
+      </div>
+    </div>
+    <button class="red-button" data-bind="click: confirmOutlier">Outlier</button>
+    <button class="green-button" data-bind="click: declineOutlier">Not outlier</button>
+  </div>
+
+  <div>
+    <button class="blue-button" type="button" id="nextPoint">Next Point</button>
+    <button class="blue-button" type="button" id="nextBatch">Next Batch</button>
+    <button class="blue-button" type="button" id="trainSVM">Go to prediction mode</button>
+  </div>
+
+</body>
+
+</html>
